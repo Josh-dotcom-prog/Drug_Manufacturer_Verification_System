@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturer Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+        /* Add slide-in animation */
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        /* Fixed height for the form container */
+        .form-container {
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Scrollable form content */
+        .form-content {
+            flex-grow: 1;
+            overflow-y: auto; /* Allow scrolling if content exceeds height */
+            padding-bottom: 80px; /* Space for fixed buttons */
+        }
+
+        /* Fixed buttons at the bottom */
+        .form-buttons {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 16px;
+            /* border-top: 1px solid #e5e7eb; */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navbar -->
+     <!-- Navigation -->
+     <nav class="bg-blue-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-shield-alt text-2xl"></i>
+                <span class="text-xl font-bold">DMVS</span>
+                <span class="hidden md:inline-block text-sm bg-blue-600 px-2 py-1 rounded ml-2">Manufacturer Portal</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-blue-200">Home</a>
+                <a href="#" class="hover:text-blue-200">Features</a>
+                <a href="#" class="hover:text-blue-200">Pricing</a>
+                <a href="#" class="hover:text-blue-200">Contact</a>
+            </div>
+            <div>
+                <button class="bg-white text-blue-800 px-4 py-2 rounded-md font-medium hover:bg-blue-100">Login</button>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Main Content -->
+    <div class="flex-grow flex items-center justify-center py-4">
+        <div class="container max-w-3xl mx-auto px-4">
+            <div class="bg-white p-8 relative form-container">
+                <!-- Header -->
+                <div class="mb-8">
+                    <div class="inline-block bg-black rounded-lg p-3 mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Manufacturer Account</h2>
+                    <p class="text-gray-600">Complete all steps</p>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="mb-8 top-5 sticky z-50 transition-shadow duration-300">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-sm font-medium text-green-600">Step <span id="currentStep">1</span> of 5</span>
+                        <span class="text-sm font-medium text-gray-600" id="stepTitle">Admin Information</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-green-700 h-2.5 rounded-full transition-all duration-300" id="progressBar" style="width: 16.66%"></div>
+                    </div>
+                </div>             
+
+                <!-- Form -->
+                <form id="signupForm" class="">
+                    <!-- Scrollable Form Content -->
+                    <div class="form-content">
+                        <!-- Step 1: Personal Information -->
+                        <div class="step-content" id="step1">
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- Fullname -->
+                                <div class="col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Fullname</label>
+                                    <input type="text" name="username" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                </div>
+                            
+                                <!-- Email -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                    <input type="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                </div>
+                            
+                                <!-- Username -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Organization Role</label>
+                                    <input type="tel" name="phone1" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                </div>
+                            
+                                <!-- Phone Number -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <input type="tel" name="phone2" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                </div>
+
+                                <!-- Gender -->
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+                                    <select name="gender" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                        <option value="">Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <!-- Step 2: Manufacturer logo-->
+                        <div class="step-content hidden" id="step2">
+                            <div class="grid gap-4 w-full">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Manufacturer Logo</label>                      
+                                <div class="flex items-center justify-center w-full">
+                                    <label for="dropzone-file" class="w-full flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                            <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                            </svg>
+                                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                                        </div>
+                                        <input id="dropzone-file" type="file" class="hidden" />
+                                    </label>
+                                </div> 
+                            </div>                            
+                        </div>
+
+                        <!-- Step 3: Address Information -->
+                        <div class="step-content hidden" id="step3">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Business Name</label>
+                                    <input type="text" name="address" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Website</label>
+                                    <input type="text" name="city" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nature of Business</label>
+                                    <input type="text" name="state" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Support Contact</label>
+                                    <input type="text" name="zip_code" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Country</label>
+                                    <input type="text" name="country" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                </div>
+                                <div class="col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Permanent Address</label>
+                                    <input type="text" name="permanent_address" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition-all">
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <!-- Step 4: License Information -->
+                        <div class="step-content hidden" id="step4">
+                            <div class="grid gap-4 w-full">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Business Logo</label>                      
+                                <div class="flex items-center justify-center w-full">
+                                    <label for="dropzone-file" class="w-full flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                            <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                            </svg>
+                                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                                        </div>
+                                        <input id="dropzone-file" type="file" class="hidden" />
+                                    </label>
+                                </div> 
+                            </div> 
+                        </div>
+
+                        <!-- Step 5: Profile -->
+                        <div class="step-content hidden" id="step5">
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-medium text-gray-900 mb-2">Terms and Conditions</h3>
+                                    <p class="text-sm text-gray-600 mb-4">Please read and accept our terms and conditions to continue.</p>
+                                </div>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="terms" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                    <span class="ml-2 text-sm text-gray-600">I agree to the Terms and Conditions</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="privacy" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                    <span class="ml-2 text-sm text-gray-600">I agree to the Privacy Policy</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fixed Navigation Buttons -->
+                    <div class="form-buttons">
+                        <div class="flex justify-between">
+                            <button type="button" id="prevBtn"
+                                class="px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                Previous
+                            </button>
+                            <button id="nextBtn" type="button" class="px-6 text-white bg-amber-600 hover:bg-green-700 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2">
+                                Next
+                                <svg class="ml-2 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </button>
+                            <button type="submit" id="submitBtn"
+                                class="px-6 py-2 bg-green-700 text-white rounded-full hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors hidden">
+                                Create Account
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer class="py-4 text-center text-gray-600 fixed bottom-0 left-0 w-full shadow-md">
+    <div class="container mx-auto px-4">
+        &copy; 2025 Cognosphere Dynamics. All rights reserved.
+    </div>
+</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('signupForm');
+            const progressBar = document.getElementById('progressBar');
+            const currentStepSpan = document.getElementById('currentStep');
+            const stepTitleSpan = document.getElementById('stepTitle');
+            const prevButton = document.getElementById('prevBtn');
+            const nextButton = document.getElementById('nextBtn');
+            const submitButton = document.getElementById('submitBtn');
+
+            let currentStep = 1;
+            const totalSteps = 5;
+
+            const stepTitles = {
+                1: 'Admin Information',
+                2: 'Admin Profile Avatar',
+                3: 'Business Information',
+                4: 'Business Logo',
+                6: 'Legal Agreement'
+            };
+
+            function updateButtons() {
+                if (currentStep === 1) {
+                    prevButton.classList.add('opacity-50', 'cursor-not-allowed');
+                    prevButton.disabled = true;
+                } else {
+                    prevButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                    prevButton.disabled = false;
+                }
+
+                if (currentStep === totalSteps) {
+                    nextButton.classList.add('hidden');
+                    submitButton.classList.remove('hidden');
+                } else {
+                    nextButton.classList.remove('hidden');
+                    submitButton.classList.add('hidden');
+                }
+            }
+
+            function updateProgress() {
+                const progress = (currentStep / totalSteps) * 100;
+                progressBar.style.width = `${progress}%`;
+                currentStepSpan.textContent = currentStep;
+                stepTitleSpan.textContent = stepTitles[currentStep];
+            }
+
+            function showCurrentStep() {
+                document.querySelectorAll('.step-content').forEach((step, index) => {
+                    if (index + 1 === currentStep) {
+                        step.classList.remove('hidden');
+                        step.classList.add('slide-in');
+                        // Remove animation class after animation completes
+                        setTimeout(() => {
+                            step.classList.remove('slide-in');
+                        }, 500);
+                    } else {
+                        step.classList.add('hidden');
+                    }
+                });
+            }
+
+            function nextStep() {
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    updateProgress();
+                    showCurrentStep();
+                    updateButtons();
+                }
+            }
+
+            function prevStep() {
+                if (currentStep > 1) {
+                    currentStep--;
+                    updateProgress();
+                    showCurrentStep();
+                    updateButtons();
+                }
+            }
+
+            nextButton.addEventListener('click', nextStep);
+            prevButton.addEventListener('click', prevStep);
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                console.log('Form submitted!');
+                alert('Account created successfully!');
+            });
+
+            // Initialize the form
+            updateProgress();
+            updateButtons();
+            showCurrentStep();
+        });
+    </script>
+</body>
+</html>
