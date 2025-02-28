@@ -53,3 +53,67 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
+
+
+//Camera
+// Add event listener for DOM content loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const scanButton = document.getElementById('scanQrButton');
+    
+    if (scanButton) {
+        scanButton.addEventListener('click', initQRScanner);
+    }
+});
+
+// Separate function for QR scanner initialization
+function initQRScanner() {
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+            .then(function(stream) {
+                createScannerModal();
+                setupVideoStream(stream);
+            });
+    } else {
+        alert('Sorry, your browser does not support camera access');
+    }
+}
+
+function createScannerModal() {
+    const scannerModal = `
+        <div class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+            <div class="bg-white p-4 rounded-lg w-full max-w-md">
+                <div class="relative">
+                    <video id="qr-video" class="w-full"></video>
+                    <div class="absolute inset-0 border-2 border-blue-500 opacity-50"></div>
+                </div>
+                <button id="close-scanner" class="mt-4 w-full bg-red-500 text-white px-4 py-2 rounded">
+                    Close Scanner
+                </button>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', scannerModal);
+}
+
+function setupVideoStream(stream) {
+    const video = document.getElementById('qr-video');
+    video.srcObject = stream;
+    video.play();
+    
+    const qrScanner = new QrScanner(video, result => {
+        alert('QR Code detected: ' + result);
+        stopScanner(qrScanner, stream);
+    });
+    
+    qrScanner.start();
+    
+    document.getElementById('close-scanner').addEventListener('click', () => {
+        stopScanner(qrScanner, stream);
+    });
+}
+
+function stopScanner(qrScanner, stream) {
+    qrScanner.stop();
+    stream.getTracks().forEach(track => track.stop());
+    document.querySelector('.fixed').remove();
+}
