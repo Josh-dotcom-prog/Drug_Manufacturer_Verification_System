@@ -35,3 +35,21 @@
   signupTabBtn.addEventListener('click', showSignup);
   showSignupBtn.addEventListener('click', showSignup);
   showLoginBtn.addEventListener('click', showLogin);
+
+
+  //Drug registration form
+  document.addEventListener('DOMContentLoaded', function() {
+    const registerDrugBtn = document.getElementById('registerDrugBtn');
+    const registerSection = document.getElementById('registerSection');
+    
+    registerDrugBtn.addEventListener('click', function() {
+        registerSection.classList.remove('hidden');
+        registerSection.scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    const cancelButton = document.getElementById('cancelRegistration');
+    cancelButton.addEventListener('click', function() {
+        registerSection.classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
