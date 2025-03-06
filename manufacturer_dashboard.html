@@ -34,20 +34,8 @@
                     <span class="font-medium">Batches</span>
                 </a>
                 <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-md mb-1">
-                    <i class="fas fa-truck w-5 h-5 mr-3"></i>
-                    <span class="font-medium">Supply Chain</span>
-                </a>
-                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-md mb-1">
-                    <i class="fas fa-file-alt w-5 h-5 mr-3"></i>
-                    <span class="font-medium">Compliance</span>
-                </a>
-                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-md mb-1">
                     <i class="fas fa-cog w-5 h-5 mr-3"></i>
                     <span class="font-medium">Settings</span>
-                </a>
-                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-md">
-                    <i class="fas fa-question-circle w-5 h-5 mr-3"></i>
-                    <span class="font-medium">Help</span>
                 </a>
             </nav>
         </aside>
@@ -66,9 +54,27 @@
                 <div class="flex justify-between items-center mb-8">
                     <h1 class="text-2xl font-bold text-gray-800">Manufacturer Dashboard</h1>
                     <div class="flex items-center">
-                        <div
-                            class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold mr-3">
-                            PM
+                        <div class="relative">
+                            <button id="profileButton"
+                                class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold mr-3">
+                                PM
+                            </button>
+                            <div id="profileDropdown"
+                                class="hidden absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-user mr-2"></i>Profile
+                                </a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-cog mr-2"></i>Settings
+                                </a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-bell mr-2"></i>Notifications
+                                </a>
+                                <hr class="my-1">
+                                <a href="/Login.html" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100">
+                                    <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                                </a>
+                            </div>
                         </div>
                         <div>
                             <p class="text-gray-600">Welcome,</p>
@@ -400,8 +406,88 @@
                     </div>
                 </div>
 
+                 <!-- Registration Section -->
+                 <div id="registrationSection" class="hidden mb-8 bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="px-6 py-4 border-b border-gray-200">
+                        <h2 class="text-lg font-semibold">Recent Registrations</h2>
+                    </div>
+
+                    <div class="p-6">
+                        <!-- Registration Stats -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h3 class="text-sm text-gray-600">Pending Approvals</h3>
+                                <p class="text-2xl font-bold text-blue-600">12</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h3 class="text-sm text-gray-600">Approved This Month</h3>
+                                <p class="text-2xl font-bold text-green-600">28</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <h3 class="text-sm text-gray-600">Total Registrations</h3>
+                                <p class="text-2xl font-bold text-purple-600">156</p>
+                            </div>
+                        </div>
+
+                        <!-- Recent Registration Table -->
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                                        Registration ID</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Drug
+                                        Name</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                                        Submission Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4">REG-2025-042</td>
+                                    <td class="px-6 py-4">Amoxicillin 500mg</td>
+                                    <td class="px-6 py-4">Mar 15, 2025</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Pending</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button class="text-blue-600 hover:text-blue-800">View Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4">REG-2025-041</td>
+                                    <td class="px-6 py-4">Metformin 850mg</td>
+                                    <td class="px-6 py-4">Mar 12, 2025</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Approved</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button class="text-blue-600 hover:text-blue-800">View Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4">REG-2025-040</td>
+                                    <td class="px-6 py-4">Ciprofloxacin 500mg</td>
+                                    <td class="px-6 py-4">Mar 10, 2025</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Rejected</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button class="text-blue-600 hover:text-blue-800">View Details</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <!-- Drug Registration Form (hidden by default) -->
-                <div id="registerSection" class="hidden mb-8 bg-white rounded-lg shadow-sm">
+                <div id="registerForm" class="hidden mb-8 bg-white rounded-lg shadow-sm overflow-hidden">
                     <div class="px-6 py-4 border-b border-gray-200">
                         <h2 class="text-lg font-semibold">Register New Drug Product</h2>
                     </div>
@@ -426,8 +512,8 @@
                                 </div>
 
                                 <div>
-                                    <label for="nafdacNumber"
-                                        class="block text-sm font-medium text-gray-700 mb-1">NDA Registration
+                                    <label for="nafdacNumber" class="block text-sm font-medium text-gray-700 mb-1">NDA
+                                        Registration
                                         Number</label>
                                     <input type="text" id="nafdacNumber" placeholder="If already approved"
                                         class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
@@ -539,7 +625,8 @@
                                 </div>
 
                                 <div class="mt-8 flex items-center">
-                                    <button type="submit" class="bg-green-600 rounded-lg p-2 text-white">Generate QR Code</button>
+                                    <button type="submit" class="bg-green-600 rounded-lg p-2 text-white">Generate QR
+                                        Code</button>
                                 </div>
                             </div>
 
@@ -556,95 +643,101 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            
+        </div>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    const registerDrugBtn = document.getElementById('registerDrugBtn');
-                    const registerSection = document.getElementById('registerSection');
+        </main>
 
-                    registerDrugBtn.addEventListener('click', function () {
-                        registerSection.classList.remove('hidden');
-                        registerSection.scrollIntoView({ behavior: 'smooth' });
-                    });
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const registerDrugBtn = document.getElementById('registerDrugBtn');
+                const registerSection = document.getElementById('registerForm');
 
-                    const cancelButton = document.getElementById('cancelRegistration');
-                    cancelButton.addEventListener('click', function () {
-                        registerSection.classList.add('hidden');
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                    });
+                registerDrugBtn.addEventListener('click', function () {
+                    registerSection.classList.remove('hidden');
+                    registerSection.scrollIntoView({ behavior: 'smooth' });
                 });
 
-                //Genereation
-                document.addEventListener('DOMContentLoaded', function () {
-                    const drugRegistrationForm = document.getElementById('drugRegistrationForm');
+                const cancelButton = document.getElementById('cancelRegistration');
+                cancelButton.addEventListener('click', function () {
+                    registerSection.classList.add('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
 
-                    if (drugRegistrationForm) {
-                        drugRegistrationForm.addEventListener('submit', function (event) {
-                            event.preventDefault();
+            //Drop down 
+            document.addEventListener('DOMContentLoaded', function () {
+                const profileButton = document.getElementById('profileButton');
+                const profileDropdown = document.getElementById('profileDropdown');
 
-                            // Generate unique batch number
-                            const batchNumber = generateBatchNumber();
+                profileButton.addEventListener('click', () => {
+                    profileDropdown.classList.toggle('hidden');
+                });
 
-                            // Get form data
-                            const formData = {
-                                drugName: document.getElementById('drugName').value,
-                                genericName: document.getElementById('genericName').value,
-                                manufactureDate: document.getElementById('manufactureDate').value,
-                                batchNumber: batchNumber
-                            };
-
-                            // Generate QR code containing drug and batch info
-                            generateQRCode(formData);
-
-                            // Display success message with batch number
-                            showSuccessMessage(batchNumber);
-
-                            // Reset form and hide it
-                            drugRegistrationForm.reset();
-                            document.getElementById('registerSection').classList.add('hidden');
-                        });
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!profileButton.contains(e.target) && !profileDropdown.contains(e.target)) {
+                        profileDropdown.classList.add('hidden');
                     }
                 });
-
-                function generateBatchNumber() {
-                    const prefix = 'BTH';
-                    const timestamp = Date.now().toString().slice(-6);
-                    const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
-                    return `${prefix}-${timestamp}-${random}`;
-                }
-
-                function generateQRCode(data) {
-                    // Add QR code generation div
-                    const qrCodeDiv = document.createElement('div');
-                    qrCodeDiv.id = 'qrcode';
-                    document.body.appendChild(qrCodeDiv);
-
-                    // Generate QR code using qrcode.js library
-                    new QRCode(document.getElementById('qrcode'), {
-                        text: JSON.stringify(data),
-                        width: 128,
-                        height: 128
-                    });
-                }
-
-                function showSuccessMessage(batchNumber) {
-                    const successModal = `
-        <div class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
-            <div class="bg-white p-8 rounded-lg shadow-xl">
-                <h3 class="text-xl font-bold text-green-600 mb-4">Drug Registered Successfully!</h3>
-                <p class="mb-4">Batch Number: ${batchNumber}</p>
-                <div id="qrcode" class="mb-4"></div>
-                <button onclick="this.parentElement.parentElement.remove()" 
-                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                    Close
-                </button>
-            </div>
-        </div>
-    `;
-
-                    document.body.insertAdjacentHTML('beforeend', successModal);
-                }
+            });
 
 
-            </script>
+            //Tabs
+            // Get the batch tracking tab and section
+            const batchesTab = document.getElementById('batchesTab');
+            const productsTab = document.getElementById('productsTab');
+            const registerTab = document.getElementById('registerTab');
+            const batchesSection = document.getElementById('batchesSection');
+            const productsSection = document.getElementById('productsSection');
+            const registerSection = document.getElementById('registerSection');
+
+            // Function to show batch tracking section
+            function showBatches() {
+                // Show batches section, hide products
+                batchesSection.classList.remove('hidden');
+                productsSection.classList.add('hidden');
+
+                // Update tab styling
+                batchesTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                batchesTab.classList.remove('text-gray-500');
+                productsTab.classList.add('text-gray-500');
+                productsTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                registerTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+            }
+
+            //Funtion to show products section
+            function showProducts() {
+                productsSection.classList.remove('hidden');
+                batchesSection.classList.add('hidden');
+
+                productsTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                productsTab.classList.remove('text-gray-500');
+                batchesTab.classList.add('text-gray-500');
+                batchesTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+            }
+
+            //function to show registration section
+            function showRegistration() {
+                productsSection.classList.add('hidden');
+                batchesSection.classList.add('hidden');
+                registrationSection.classList.remove('hidden');
+
+                registerTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                registerTab.classList.remove('text-gray-500');
+                productsTab.classList.add('text-gray-500');
+                productsTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                batchesTab.classList.add('text-gray-500');
+                batchesTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+            }
+
+
+            // Add click event listener
+            batchesTab.addEventListener('click', showBatches);
+            productsTab.addEventListener('click', showProducts);
+            registerTab.addEventListener('click', showRegistration);
+        </script>
+
+
+</body>
+</html>

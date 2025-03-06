@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMVS | Products</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-gray-200 hidden md:block">
+            <div class="p-6 flex items-center space-x-3 border-b border-gray-200">
+                <i class="fas fa-pills text-blue-600 text-2xl"></i>
+                <h1 class="text-xl font-bold text-blue-600">DMVS</h1>
+            </div>
+
+            <nav class="mt-6 px-3">
+                <a href="#"
+                    class="flex items-center px-4 py-3 text-blue-600 bg-blue-50 rounded-md mb-1 border-l-4 border-blue-600">
+                    <i class="fas fa-chart-line w-5 h-5 mr-3"></i>
+                    <span class="font-medium">Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-md mb-1">
+                    <i class="fas fa-capsules w-5 h-5 mr-3"></i>
+                    <span class="font-medium">Products</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-md mb-1">
+                    <i class="fas fa-barcode w-5 h-5 mr-3"></i>
+                    <span class="font-medium">Batches</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-md mb-1">
+                    <i class="fas fa-cog w-5 h-5 mr-3"></i>
+                    <span class="font-medium">Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Mobile sidebar button -->
+        <div class="md:hidden fixed bottom-4 right-4 z-50">
+            <button class="bg-blue-600 text-white p-3 rounded-full shadow-lg">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto">
+            <div class="p-6">
+                <!-- Header -->
+                <div class="flex justify-between items-center mb-8">
+                    <h1 class="text-2xl font-bold text-gray-800">Manufacturer Dashboard</h1>
+                    <div class="flex items-center">
+                        <div class="relative">
+                            <button id="profileButton"
+                                class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold mr-3">
+                                PM
+                            </button>
+                            <div id="profileDropdown"
+                                class="hidden absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-user mr-2"></i>Profile
+                                </a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-cog mr-2"></i>Settings
+                                </a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-bell mr-2"></i>Notifications
+                                </a>
+                                <hr class="my-1">
+                                <a href="/Login.html" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100">
+                                    <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-gray-600">Welcome,</p>
+                            <p class="font-medium text-blue-600">PharmaMed Inc.</p>
+                        </div>
+                    </div>
+   
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Header Section -->
+        <div class="mb-8">
+            <h1 class="text-2xl font-bold text-gray-900">Product Management</h1>
+            <p class="mt-2 text-sm text-gray-600">Manage and monitor your pharmaceutical products</p>
+        </div>
+
+        <!-- Action Bar -->
+        <div class="flex justify-between items-center mb-6">
+            <div class="flex space-x-4">
+                <button class="bg-blue-600 text-white px-4 py-2 rounded-md flex items-center">
+                    <i class="fas fa-plus mr-2"></i> Add New Product
+                </button>
+                <button class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md flex items-center">
+                    <i class="fas fa-filter mr-2"></i> Filter
+                </button>
+            </div>
+            <div class="flex items-center bg-white rounded-md border">
+                <input type="text" placeholder="Search products..." class="px-4 py-2 rounded-md focus:outline-none">
+                <button class="px-4 py-2 border-l">
+                    <i class="fas fa-search text-gray-400"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Amoxicillin</h3>
+                        <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Active</span>
+                    </div>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><span class="font-medium">NDA Number:</span> A4-0142</p>
+                        <p><span class="font-medium">Category:</span> Antibiotic</p>
+                        <p><span class="font-medium">Strength:</span> 500mg</p>
+                        <p><span class="font-medium">Form:</span> Capsule</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                        <div class="text-sm">
+                            <p class="text-gray-500">Last Updated</p>
+                            <p class="font-medium">Mar 15, 2025</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="p-2 text-gray-400 hover:text-blue-600">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="p-2 text-gray-400 hover:text-blue-600">
+                                <i class="fas fa-qrcode"></i>
+                            </button>
+                            <button class="p-2 text-gray-400 hover:text-red-600">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Paracetamol</h3>
+                        <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Active</span>
+                    </div>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><span class="font-medium">NDA Number:</span> A4-1853</p>
+                        <p><span class="font-medium">Category:</span> Analgesic</p>
+                        <p><span class="font-medium">Strength:</span> 500mg</p>
+                        <p><span class="font-medium">Form:</span> Tablet</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                        <div class="text-sm">
+                            <p class="text-gray-500">Last Updated</p>
+                            <p class="font-medium">Mar 12, 2025</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="p-2 text-gray-400 hover:text-blue-600">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="p-2 text-gray-400 hover:text-blue-600">
+                                <i class="fas fa-qrcode"></i>
+                            </button>
+                            <button class="p-2 text-gray-400 hover:text-red-600">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Product Card -->
+            <div class="bg-gray-50 rounded-lg border-2 border-dashed border-gray-300 p-6 flex items-center justify-center cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-colors">
+                <div class="text-center">
+                    <i class="fas fa-plus-circle text-4xl text-gray-400 mb-2"></i>
+                    <p class="text-sm text-gray-600">Add New Product</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-8 flex justify-center">
+            <nav class="flex items-center space-x-2">
+                <button class="px-3 py-2 rounded-md bg-white border text-gray-500 hover:bg-gray-50">Previous</button>
+                <button class="px-3 py-2 rounded-md bg-blue-600 text-white">1</button>
+                <button class="px-3 py-2 rounded-md bg-white border text-gray-500 hover:bg-gray-50">2</button>
+                <button class="px-3 py-2 rounded-md bg-white border text-gray-500 hover:bg-gray-50">3</button>
+                <button class="px-3 py-2 rounded-md bg-white border text-gray-500 hover:bg-gray-50">Next</button>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        // Add your JavaScript functionality here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Product search functionality
+            // Filter functionality
+            // Add/Edit/Delete product handlers
+        });
+    </script>
+</body>
+</html>
