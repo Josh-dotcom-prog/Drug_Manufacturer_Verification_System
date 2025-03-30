@@ -15,13 +15,13 @@
         <!-- Sidebar -->
         <aside class="w-64 bg-white border-r border-gray-200 hidden md:block">
             <div class="p-6 flex items-center space-x-3 border-b border-gray-200">
-                <i class="fas fa-pills text-blue-600 text-2xl"></i>
-                <h1 class="text-xl font-bold text-blue-600">DMVS</h1>
+                <i class="fas fa-pills text-green-600 text-2xl"></i>
+                <h1 class="text-xl font-bold text-green-600">DMVS</h1>
             </div>
 
             <nav class="mt-6 px-3">
                 <a href="#"
-                    class="flex items-center px-4 py-3 text-blue-600 bg-blue-50 rounded-md mb-1 border-l-4 border-blue-600">
+                    class="flex items-center px-4 py-3 text-green-600 bg-green-50 rounded-md mb-1 border-l-4 border-green-600">
                     <i class="fas fa-chart-line w-5 h-5 mr-3"></i>
                     <span class="font-medium">Dashboard</span>
                 </a>
@@ -42,7 +42,7 @@
 
         <!-- Mobile sidebar button -->
         <div class="md:hidden fixed bottom-4 right-4 z-50">
-            <button class="bg-blue-600 text-white p-3 rounded-full shadow-lg">
+            <button class="bg-green-600 text-white p-3 rounded-full shadow-lg">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -56,7 +56,7 @@
                     <div class="flex items-center">
                         <div class="relative">
                             <button id="profileButton"
-                                class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold mr-3">
+                                class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center font-semibold mr-3">
                                 PM
                             </button>
                             <div id="profileDropdown"
@@ -78,7 +78,7 @@
                         </div>
                         <div>
                             <p class="text-gray-600">Welcome,</p>
-                            <p class="font-medium text-blue-600">PharmaMed Inc.</p>
+                            <p class="font-medium text-green-600">PharmaMed Inc.</p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         <p class="text-green-600 text-sm flex items-center">
                             <i class="fas fa-arrow-up mr-1"></i> 2 new this month
                         </p>
-                        <i class="fas fa-capsules text-3xl text-blue-100 absolute top-6 right-6"></i>
+                        <i class="fas fa-capsules text-3xl text-green-100 absolute top-6 right-6"></i>
                     </div>
 
                     <div class="bg-white p-6 rounded-lg shadow-sm relative overflow-hidden">
@@ -100,7 +100,7 @@
                         <p class="text-green-600 text-sm flex items-center">
                             <i class="fas fa-arrow-up mr-1"></i> 15 new this month
                         </p>
-                        <i class="fas fa-boxes text-3xl text-blue-100 absolute top-6 right-6"></i>
+                        <i class="fas fa-boxes text-3xl text-green-100 absolute top-6 right-6"></i>
                     </div>
 
                     <div class="bg-white p-6 rounded-lg shadow-sm relative overflow-hidden">
@@ -109,7 +109,7 @@
                         <p class="text-green-600 text-sm flex items-center">
                             <i class="fas fa-arrow-up mr-1"></i> 23% from last month
                         </p>
-                        <i class="fas fa-qrcode text-3xl text-blue-100 absolute top-6 right-6"></i>
+                        <i class="fas fa-qrcode text-3xl text-green-100 absolute top-6 right-6"></i>
                     </div>
 
                     <div class="bg-white p-6 rounded-lg shadow-sm relative overflow-hidden">
@@ -125,7 +125,7 @@
                 <!-- Action Buttons -->
                 <div class="mb-6">
                     <button id="registerDrugBtn"
-                        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center">
+                        class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md flex items-center">
                         <i class="fas fa-plus mr-2"></i> Register New Drug
                     </button>
                 </div>
@@ -134,7 +134,7 @@
                 <div class="border-b border-gray-200 mb-6">
                     <div class="flex">
                         <button id="productsTab"
-                            class="px-6 py-3 font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">
+                            class="px-6 py-3 font-medium text-green-600 border-b-2 border-green-600 -mb-px">
                             Products
                         </button>
                         <button id="batchesTab" class="px-6 py-3 font-medium text-gray-500 hover:text-gray-700">
@@ -337,7 +337,7 @@
                         <!-- Timeline Item 1 -->
                         <div class="relative pl-8 pb-8 border-l-2 border-gray-200">
                             <div
-                                class="absolute left-0 -translate-x-1/2 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">
+                                class="absolute left-0 -translate-x-1/2 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white">
                                 <i class="fas fa-box"></i>
                             </div>
                             <div class="ml-6">
@@ -351,7 +351,7 @@
                         <!-- Timeline Item 2 -->
                         <div class="relative pl-8 pb-8 border-l-2 border-gray-200">
                             <div
-                                class="absolute left-0 -translate-x-1/2 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">
+                                class="absolute left-0 -translate-x-1/2 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white">
                                 <i class="fas fa-vial"></i>
                             </div>
                             <div class="ml-6">
@@ -364,7 +364,7 @@
                         <!-- Timeline Item 3 -->
                         <div class="relative pl-8 pb-8 border-l-2 border-gray-200">
                             <div
-                                class="absolute left-0 -translate-x-1/2 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">
+                                class="absolute left-0 -translate-x-1/2 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white">
                                 <i class="fas fa-truck"></i>
                             </div>
                             <div class="ml-6">
@@ -415,9 +415,9 @@
                     <div class="p-6">
                         <!-- Registration Stats -->
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-green-50 p-4 rounded-lg">
                                 <h3 class="text-sm text-gray-600">Pending Approvals</h3>
-                                <p class="text-2xl font-bold text-blue-600">12</p>
+                                <p class="text-2xl font-bold text-green-600">12</p>
                             </div>
                             <div class="bg-green-50 p-4 rounded-lg">
                                 <h3 class="text-sm text-gray-600">Approved This Month</h3>
@@ -455,7 +455,7 @@
                                             class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Pending</span>
                                     </td>
                                     <td class="px-6 py-4">
-                                        <button class="text-blue-600 hover:text-blue-800">View Details</button>
+                                        <button class="text-green-600 hover:text-green-800">View Details</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -467,7 +467,7 @@
                                             class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Approved</span>
                                     </td>
                                     <td class="px-6 py-4">
-                                        <button class="text-blue-600 hover:text-blue-800">View Details</button>
+                                        <button class="text-green-600 hover:text-green-800">View Details</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -479,7 +479,7 @@
                                             class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Rejected</span>
                                     </td>
                                     <td class="px-6 py-4">
-                                        <button class="text-blue-600 hover:text-blue-800">View Details</button>
+                                        <button class="text-green-600 hover:text-green-800">View Details</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -499,7 +499,7 @@
                                     <label for="drugName" class="block text-sm font-medium text-gray-700 mb-1">Drug Name
                                         *</label>
                                     <input type="text" id="drugName"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required>
                                 </div>
 
@@ -507,7 +507,7 @@
                                     <label for="genericName"
                                         class="block text-sm font-medium text-gray-700 mb-1">Generic Name *</label>
                                     <input type="text" id="genericName"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required>
                                 </div>
 
@@ -516,14 +516,14 @@
                                         Registration
                                         Number</label>
                                     <input type="text" id="nafdacNumber" placeholder="If already approved"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
                                 </div>
 
                                 <div>
                                     <label for="category" class="block text-sm font-medium text-gray-700 mb-1">Drug
                                         Category *</label>
                                     <select id="category"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required>
                                         <option value="">Select category</option>
                                         <option value="antibiotic">Antibiotic</option>
@@ -539,7 +539,7 @@
                                     <label for="dosageForm" class="block text-sm font-medium text-gray-700 mb-1">Dosage
                                         Form *</label>
                                     <select id="dosageForm"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required>
                                         <option value="">Select dosage form</option>
                                         <option value="tablet">Tablet</option>
@@ -555,7 +555,7 @@
                                     <label for="strength" class="block text-sm font-medium text-gray-700 mb-1">Strength
                                         *</label>
                                     <input type="text" id="strength" placeholder="e.g. 500mg"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required>
                                 </div>
 
@@ -563,7 +563,7 @@
                                     <label for="composition" class="block text-sm font-medium text-gray-700 mb-1">Active
                                         Ingredients *</label>
                                     <textarea id="composition" rows="4"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required></textarea>
                                 </div>
 
@@ -572,7 +572,7 @@
                                         class="block text-sm font-medium text-gray-700 mb-1">Manufacturing Date
                                         *</label>
                                     <input type="date" id="manufactureDate"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required>
                                 </div>
 
@@ -580,7 +580,7 @@
                                     <label for="expiryDate" class="block text-sm font-medium text-gray-700 mb-1">Expiry
                                         Date *</label>
                                     <input type="date" id="expiryDate"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required>
                                 </div>
 
@@ -589,7 +589,7 @@
                                         class="block text-sm font-medium text-gray-700 mb-1">Storage Conditions</label>
                                     <input type="text" id="storageConditions"
                                         placeholder="e.g. Store in a cool, dry place"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required>
                                 </div>
 
@@ -597,7 +597,7 @@
                                     <label for="manufacturer"
                                         class="block text-sm font-medium text-gray-700 mb-1">Manufacturer *</label>
                                     <input type="text" id="manufacturer"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required>
                                 </div>
 
@@ -605,7 +605,7 @@
                                     <label for="countryOfOrigin"
                                         class="block text-sm font-medium text-gray-700 mb-1">Country of Origin *</label>
                                     <input type="text" id="countryOfOrigin"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         required>
                                 </div>
 
@@ -614,14 +614,14 @@
                                         class="block text-sm font-medium text-gray-700 mb-1">Indication</label>
                                     <textarea id="indication" rows="3"
                                         placeholder="What conditions does this drug treat?"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="sideEffects" class="block text-sm font-medium text-gray-700 mb-1">Side
                                         Effects</label>
                                     <textarea id="sideEffects" rows="3"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
                                 </div>
 
                                 <div class="mt-8 flex items-center">
@@ -632,11 +632,11 @@
 
                             <div class="mt-8 flex justify-end">
                                 <button type="button" id="cancelRegistration"
-                                    class="mr-3 px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                    class="mr-3 px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
                                     Cancel
                                 </button>
                                 <button type="submit"
-                                    class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                    class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
                                     Register Drug
                                 </button>
                             </div>
@@ -699,11 +699,11 @@
                 productsSection.classList.add('hidden');
 
                 // Update tab styling
-                batchesTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                batchesTab.classList.add('text-green-600', 'border-b-2', 'border-green-600');
                 batchesTab.classList.remove('text-gray-500');
                 productsTab.classList.add('text-gray-500');
-                productsTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
-                registerTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                productsTab.classList.remove('text-green-600', 'border-b-2', 'border-green-600');
+                registerTab.classList.remove('text-green-600', 'border-b-2', 'border-green-600');
             }
 
             //Funtion to show products section
@@ -711,10 +711,10 @@
                 productsSection.classList.remove('hidden');
                 batchesSection.classList.add('hidden');
 
-                productsTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                productsTab.classList.add('text-green-600', 'border-b-2', 'border-green-600');
                 productsTab.classList.remove('text-gray-500');
                 batchesTab.classList.add('text-gray-500');
-                batchesTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                batchesTab.classList.remove('text-green-600', 'border-b-2', 'border-green-600');
             }
 
             //function to show registration section
@@ -723,12 +723,12 @@
                 batchesSection.classList.add('hidden');
                 registrationSection.classList.remove('hidden');
 
-                registerTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                registerTab.classList.add('text-green-600', 'border-b-2', 'border-green-600');
                 registerTab.classList.remove('text-gray-500');
                 productsTab.classList.add('text-gray-500');
-                productsTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                productsTab.classList.remove('text-green-600', 'border-b-2', 'border-green-600');
                 batchesTab.classList.add('text-gray-500');
-                batchesTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                batchesTab.classList.remove('text-green-600', 'border-b-2', 'border-green-600');
             }
 
 

@@ -11,10 +11,18 @@ use Illuminate\Support\Facades\Auth;
 class ManufacturerAuthController extends Controller
 {
 
+
+    //Function to display landing page
     public function index()
+    {
+        return view('index');
+    }
+
+    public function login()
     {
         return view('auth.login');
     }
+
 
     public function manufacturerLogin(Request $request)
     {
@@ -26,18 +34,16 @@ class ManufacturerAuthController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('manufacturer-dashboard')
+            return redirect()->intended('manufacturer_dashboard')
                 ->withSuccess('Signed in');
         }
         $validator['emailPassword'] = 'Email address or password is incorrect.';
         return redirect("login")->withErrors($validator);
     }
 
-
-
     public function registration()
     {
-        return view('auth.registration');
+        return view('auth.register');
     }
 
     public function customRegistration(Request $request)
@@ -46,7 +52,7 @@ class ManufacturerAuthController extends Controller
             'company_name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8',
-            
+
         ]);
 
         $data = $request->all();
