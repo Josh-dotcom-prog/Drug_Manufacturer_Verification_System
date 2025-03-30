@@ -192,7 +192,8 @@
                                     <td class="px-6 py-4 whitespace-nowrap">Capsule</td>
                                     <td class="px-6 py-4 whitespace-nowrap">12 Jan 2025</td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex space-x-2">
@@ -405,8 +406,8 @@
                     </div>
                 </div>
 
-                 <!-- Registration Section -->
-                 <div id="registrationSection" class="hidden mb-8 bg-white rounded-lg shadow-sm overflow-hidden">
+                <!-- Registration Section -->
+                <div id="registrationSection" class="hidden mb-8 bg-white rounded-lg shadow-sm overflow-hidden">
                     <div class="px-6 py-4 border-b border-gray-200">
                         <h2 class="text-lg font-semibold">Recent Registrations</h2>
                     </div>
@@ -642,8 +643,8 @@
                         </form>
                     </div>
                 </div>
-            
-        </div>
+
+            </div>
 
         </main>
 
@@ -735,8 +736,45 @@
             batchesTab.addEventListener('click', showBatches);
             productsTab.addEventListener('click', showProducts);
             registerTab.addEventListener('click', showRegistration);
+
+            const form = document.getElementById('drug-registration-form');
+            let qrCode;
+
+            function generateQrCode(drugData) {
+                // Clear previous QR code
+                document.getElementById('qr-code').innerHTML = '';
+
+                // Generate new QR code
+                return new QRCode("qr-code", {
+                    text: JSON.stringify(drugData),
+                    width: 256,
+                    height: 256,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H,
+                });
+            }
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const drugData = {
+                    drugName: document.getElementById('drugName').value,
+                    manufacturer: document.getElementById('manufacturer').value,
+                    manufactureDate: document.getElementById('manufactureDate').value,
+                    expiryDate: document.getElementById('expiryDate').value,
+                    batchId: 'BTH-' + Date.now()
+                };
+
+                if (qrCode == null) {
+                    qrCode = generateQrCode(drugData);
+                } else {
+                    qrCode.makeCode(JSON.stringify(drugData));
+                }
+            });
         </script>
 
 
 </body>
+
 </html>

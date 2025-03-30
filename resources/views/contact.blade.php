@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+
 <body class="bg-gray-100 font-sans">
     <!-- Navigation (Same as index.html) -->
     <nav class="bg-blue-800 text-white shadow-lg">
@@ -16,12 +18,15 @@
                 <span class="text-xl font-bold">DMVS</span>
             </div>
             <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-blue-200">Verify Drug</a>
-                <a href="about.html" class="hover:text-blue-200">About</a>
-                <a href="contact.html" class="hover:text-blue-200">Contact</a>
+                <a href="/" class="hover:text-blue-200">Verify Drug</a>
+                <a href="/about" class="hover:text-blue-200">About</a>
+                <a href="/contact" class="hover:text-blue-200">Contact</a>
             </div>
             <div>
-                <button class="bg-white text-blue-800 px-4 py-2 rounded-md font-medium hover:bg-blue-100">Login</button>
+                <a href="/login-register">
+                    <button
+                        class="bg-white text-blue-800 px-4 py-2 rounded-md font-medium hover:bg-blue-100">Login</button>
+                </a>
             </div>
         </div>
     </nav>
@@ -31,7 +36,8 @@
         <!-- Contact Header -->
         <section class="text-center py-8 mb-12">
             <h1 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Get in touch with our team for any inquiries about drug verification or manufacturer registration.</p>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Get in touch with our team for any inquiries about drug
+                verification or manufacturer registration.</p>
         </section>
 
         <!-- Contact Content -->
@@ -42,21 +48,31 @@
                 <form>
                     <div class="mb-6">
                         <label class="block text-gray-700 mb-2">Full Name</label>
-                        <input type="text" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="John Doe">
+                        <input type="text"
+                            class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            placeholder="John Doe">
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 mb-2">Email Address</label>
-                        <input type="email" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="john@example.com">
+                        <input type="email"
+                            class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            placeholder="john@example.com">
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 mb-2">Subject</label>
-                        <input type="text" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="How can we help?">
+                        <input type="text"
+                            class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            placeholder="How can we help?">
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 mb-2">Message</label>
-                        <textarea class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none h-32" placeholder="Your message here..."></textarea>
+                        <textarea
+                            class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none h-32"
+                            placeholder="Your message here..."></textarea>
                     </div>
-                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 w-full">Send Message</button>
+                    <button type="submit"
+                        class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 w-full">Send
+                        Message</button>
                 </form>
             </section>
 
@@ -66,7 +82,8 @@
                     <h2 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h2>
                     <div class="space-y-4">
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
                             </div>
                             <div>
@@ -75,7 +92,8 @@
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-phone text-blue-600 text-xl"></i>
                             </div>
                             <div>
@@ -84,7 +102,8 @@
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-envelope text-blue-600 text-xl"></i>
                             </div>
                             <div>
@@ -122,4 +141,5 @@
         <!-- Footer content same as index.html -->
     </footer>
 </body>
+
 </html>

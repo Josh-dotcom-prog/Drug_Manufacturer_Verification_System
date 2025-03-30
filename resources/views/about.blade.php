@@ -1,37 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Drug Manufacturer Verification System</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-<body class="bg-gray-100 font-sans">
-    <!-- Navigation (Same as index.html) -->
-    <nav class="bg-blue-800 text-white shadow-lg">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fas fa-pills text-white text-2xl"></i>
-                <span class="text-xl font-bold">DMVS</span>
-            </div>
-            <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-blue-200">Verify Drug</a>
-                <a href="about.html" class="text-blue-200">About</a>
-                <a href="#" class="hover:text-blue-200">Contact</a>
-            </div>
-            <div>
-                <button class="bg-white text-blue-800 px-4 py-2 rounded-md font-medium hover:bg-blue-100">Login</button>
-            </div>
-        </div>
-    </nav>
-
+<x-layout>
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
         <!-- About Hero Section -->
         <section class="text-center py-8 mb-12">
             <h1 class="text-4xl font-bold text-gray-800 mb-4">About DMVS</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Protecting public health through innovative drug verification technology</p>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Protecting public health through innovative drug
+                verification technology</p>
         </section>
 
         <!-- Mission & Vision -->
@@ -41,14 +15,16 @@
                     <i class="fas fa-bullseye text-blue-600 text-2xl"></i>
                 </div>
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
-                <p class="text-gray-600">To ensure the safety and authenticity of pharmaceutical products through advanced verification technology, protecting consumers from counterfeit medications.</p>
+                <p class="text-gray-600">To ensure the safety and authenticity of pharmaceutical products through
+                    advanced verification technology, protecting consumers from counterfeit medications.</p>
             </div>
             <div class="bg-white p-8 rounded-lg shadow-md">
                 <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                     <i class="fas fa-eye text-blue-600 text-2xl"></i>
                 </div>
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
-                <p class="text-gray-600">To become the leading global platform for drug verification, creating a safer pharmaceutical ecosystem for everyone.</p>
+                <p class="text-gray-600">To become the leading global platform for drug verification, creating a safer
+                    pharmaceutical ecosystem for everyone.</p>
             </div>
         </section>
 
@@ -61,21 +37,24 @@
                         <i class="fas fa-shield-alt text-blue-600"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Secure Verification</h3>
-                    <p class="text-gray-600">Advanced encryption and blockchain technology ensure tamper-proof verification results.</p>
+                    <p class="text-gray-600">Advanced encryption and blockchain technology ensure tamper-proof
+                        verification results.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-bolt text-blue-600"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Real-time Results</h3>
-                    <p class="text-gray-600">Instant verification results with detailed product information and authenticity status.</p>
+                    <p class="text-gray-600">Instant verification results with detailed product information and
+                        authenticity status.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-database text-blue-600"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Comprehensive Database</h3>
-                    <p class="text-gray-600">Connected with major pharmaceutical manufacturers for accurate verification.</p>
+                    <p class="text-gray-600">Connected with major pharmaceutical manufacturers for accurate
+                        verification.</p>
                 </div>
             </div>
         </section>
@@ -149,7 +128,8 @@
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
                         <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i
+                                class="fab fa-linkedin-in text-xl"></i></a>
                         <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
                     </div>
                 </div>
@@ -159,5 +139,4 @@
             </div>
         </div>
     </footer>
-</body>
-</html>
+</x-layout>

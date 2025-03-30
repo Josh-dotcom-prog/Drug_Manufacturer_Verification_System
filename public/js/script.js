@@ -117,3 +117,37 @@ function stopScanner(qrScanner, stream) {
     stream.getTracks().forEach(track => track.stop());
     document.querySelector('.fixed').remove();
 }
+
+
+//Signup -- login
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+    const loginTabBtn = document.getElementById('loginTabBtn');
+    const signupTabBtn = document.getElementById('signupTabBtn');
+    const showSignupBtn = document.getElementById('showSignupBtn');
+    const showLoginBtn = document.getElementById('showLoginBtn');
+
+    function showSignup() {
+        loginForm.classList.add('hidden');
+        signupForm.classList.remove('hidden');
+        loginTabBtn.classList.remove('border-blue-600', 'text-blue-600');
+        loginTabBtn.classList.add('border-gray-200', 'text-gray-500');
+        signupTabBtn.classList.add('border-blue-600', 'text-blue-600');
+        signupTabBtn.classList.remove('border-gray-200', 'text-gray-500');
+    }
+
+    function showLogin() {
+        signupForm.classList.add('hidden');
+        loginForm.classList.remove('hidden');
+        signupTabBtn.classList.remove('border-blue-600', 'text-blue-600');
+        signupTabBtn.classList.add('border-gray-200', 'text-gray-500');
+        loginTabBtn.classList.add('border-blue-600', 'text-blue-600');
+        loginTabBtn.classList.remove('border-gray-200', 'text-gray-500');
+    }
+
+    signupTabBtn.addEventListener('click', showSignup);
+    showSignupBtn.addEventListener('click', showSignup);
+    loginTabBtn.addEventListener('click', showLogin);
+    showLoginBtn.addEventListener('click', showLogin);
+});
