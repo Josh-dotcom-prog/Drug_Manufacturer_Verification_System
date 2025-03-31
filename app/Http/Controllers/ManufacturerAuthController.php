@@ -24,67 +24,67 @@ class ManufacturerAuthController extends Controller
     }
 
 
-    public function manufacturerLogin(Request $request)
-    {
-        $validator =  $request->validate([
-            'email' => 'required',
-            'password' => 'required',
-        ]);
+    // public function manufacturerLogin(Request $request)
+    // {
+    //     $validator =  $request->validate([
+    //         'email' => 'required',
+    //         'password' => 'required',
+    //     ]);
 
 
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('manufacturer_dashboard')
-                ->withSuccess('Signed in');
-        }
-        $validator['emailPassword'] = 'Email address or password is incorrect.';
-        return redirect("login")->withErrors($validator);
-    }
+    //     $credentials = $request->only('email', 'password');
+    //     if (Auth::attempt($credentials)) {
+    //         return redirect()->intended('manufacturer_dashboard')
+    //             ->withSuccess('Signed in');
+    //     }
+    //     $validator['emailPassword'] = 'Email address or password is incorrect.';
+    //     return redirect("login")->withErrors($validator);
+    // }
 
-    public function registration()
-    {
-        return view('auth.register');
-    }
+    // public function registration()
+    // {
+    //     return view('auth.register');
+    // }
 
-    public function customRegistration(Request $request)
-    {
-        $request->validate([
-            'company_name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:8',
+    // public function customRegistration(Request $request)
+    // {
+    //     $request->validate([
+    //         'company_name' => 'required',
+    //         'email' => 'required|email|unique:users',
+    //         'password' => 'required|min:8',
 
-        ]);
+    //     ]);
 
-        $data = $request->all();
-        $check = $this->create($data);
+    //     $data = $request->all();
+    //     $check = $this->create($data);
 
-        return redirect("dashboard")->withSuccess('You have signed-in');
-    }
+    //     return redirect("dashboard")->withSuccess('You have signed-in');
+    // }
 
 
-    public function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password'])
-        ]);
-    }
+    // public function create(array $data)
+    // {
+    //     return User::create([
+    //         'name' => $data['name'],
+    //         'email' => $data['email'],
+    //         'password' => Hash::make($data['password'])
+    //     ]);
+    // }
 
-    public function dashboard()
-    {
-        if (Auth::check()) {
-            return view('dashboard');
-        }
+    // public function dashboard()
+    // {
+    //     if (Auth::check()) {
+    //         return view('dashboard');
+    //     }
 
-        return redirect("login")->withSuccess('You are not allowed to access');
-    }
+    //     return redirect("login")->withSuccess('You are not allowed to access');
+    // }
 
-    public function signOut()
-    {
-        Session::flush();
-        Auth::logout();
+    // public function signOut()
+    // {
+    //     Session::flush();
+    //     Auth::logout();
 
-        return Redirect('login');
-    }
+    //     return Redirect('login');
+    // }
 }
